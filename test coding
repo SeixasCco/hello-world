@@ -1,0 +1,25 @@
+#include <iostream>//biblioteca do c++
+#include <string> //biblioteca de string
+using namespace std; // abreviação
+
+int main() { // declaração da abertura
+	float valorParcelas, totalJuros, totalPagar, percentualJuros , valorEmprestimo;//criando variaveis
+	
+	cout << "Bem vindo a calculadora de emprestimo " << endl; //aparecer na tela a frase 1
+	cout << "Digite o valor do emprestimo : " << endl;//aparecer na tela a frase 2
+	cin >> valorEmprestimo; //entrada de dados do valorEmprestimo
+	cout <<"Digite o percentual de juros ao ano : " << endl; //aparecer na tela a frase 3
+	cin >> percentualJuros;
+	
+	
+	totalJuros = ( (valorEmprestimo/percentualJuros)); //calculo do total de Juros
+	totalPagar= ( valorEmprestimo + totalJuros);//calculo do total a pagar
+	valorParcelas = ( totalPagar/12); //calculo do valor das parcelas
+	
+	cout << "O total de juros a ser pago sera de : " << totalJuros <<   endl; //aparecer na tela a frase 3
+	cout << "O total a pagar sera de : " << totalPagar <<   endl; //aparecer na tela a frase 4
+	cout << "O valor das parcelas sera de : " << valorParcelas <<   endl; //aparecer na tela a frase 5
+	
+	
+	return 0; //criando o return
+}
