@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: roboto;
+        }
+        
+        input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+            border: 1px solid rgb(118, 118, 118);
+        }
+        
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(12, 12, 139);
+        }
+        
+        div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            width: 370px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 6px 5px 12px 5px black;
+        }
+        
+        input {
+            display: block;
+            margin: 10px 5px 11px 10px;
+            width: 200px;
+            height: 20px;
+            padding-left: 5px;
+            border: 1px solid rgb(118, 118, 118);
+        }
+        
+        button {
+            cursor: pointer;
+            width: 100px;
+            height: 21px;
+        }
+    </style>
+    <title>calc Imc</title>
+</head>
+
+
+<body>
+    <div>
+        <h2>Calculadora IMC</h2>
+
+        <input type="number" id="peso" placeholder="campo para peso">
+        <input type="number" id="altura" placeholder="campo para altura">
+
+        <p id="resultadoImc"></p>
+        <button onclick="calcImc()">Resultado</button>
+    </div>
+
+    <script>
+        function calcImc() {
+            var peso = document.getElementById("peso").value;
+            var altura = document.getElementById("altura").value;
+            var resultadoImc = peso / (altura * altura);
+
+            document.getElementById("resultadoImc").innerText = resultadoImc;
+            return;
+        }
+    </script>
+</body>
+
+</html>
